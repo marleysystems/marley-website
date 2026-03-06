@@ -1,0 +1,20 @@
+{
+  "node": {
+    "4032a2cd609d5c0a46432a4fd0b818d9a0a4211d1a": {
+      "workers": {
+        "app/contact/page": {
+          "moduleId": 27518,
+          "async": false,
+          "exportedName": "submitContact",
+          "filename": "src/app/actions/contact.ts"
+        }
+      },
+      "layer": {
+        "app/contact/page": "action-browser"
+      },
+      "exportedName": "submitContact",
+      "filename": "src/app/actions/contact.ts"
+    }
+  },
+  "edge": {}
+}

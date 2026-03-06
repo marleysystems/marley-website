@@ -1,0 +1,3 @@
+module.exports=[64939,a=>{"use strict";var b=a.i(87924),c=a.i(72131);function d({children:a,delay:d=0,className:e="",direction:f="up"}){let g=(0,c.useRef)(null),[h,i]=(0,c.useState)(!1);return(0,c.useEffect)(()=>{let a=g.current;if(!a)return;let b=new IntersectionObserver(([c])=>{c.isIntersecting&&(i(!0),b.unobserve(a))},{threshold:.1,rootMargin:"0px 0px -40px 0px"});return b.observe(a),()=>b.disconnect()},[]),(0,b.jsx)("div",{ref:g,className:e,style:{...h?"up"===f?{opacity:1,transform:"translateY(0)"}:{opacity:1}:"up"===f?{opacity:0,transform:"translateY(28px)"}:{opacity:0},transition:`opacity 0.7s ease ${d}ms, transform 0.7s ease ${d}ms`},children:a})}a.s(["FadeIn",()=>d])}];
+
+//# sourceMappingURL=src_components_FadeIn_tsx_3de5c626._.js.map

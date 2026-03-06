@@ -1,0 +1,8 @@
+{
+  "/contact/page": "app/contact/page.js",
+  "/icon/route": "app-edge-has-no-entrypoint",
+  "/page": "app/page.js",
+  "/platform/page": "app/platform/page.js",
+  "/security/page": "app/security/page.js",
+  "/why-marley/page": "app/why-marley/page.js"
+}
