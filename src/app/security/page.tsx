@@ -10,34 +10,22 @@ export const metadata: Metadata = {
 
 const securityFeatures = [
   {
-    title: "Access Controls",
+    title: "Security, End to End",
     description:
-      "Role-based permissions, SSO integration, and MFA as standard. Full admin oversight of who accesses what.",
-    icon: <UsersIcon />,
+      "Marley is built with security across every layer: infrastructure, product, and operations. Robust protections, continuous monitoring, and full visibility from ingestion to output.",
+    icon: <ShieldIcon />,
   },
   {
-    title: "No Training on Your Data",
+    title: "Data Sovereignty",
     description:
-      "Your documents, queries, and interactions are never used to train AI models. Not now, not ever. Full stop.",
+      "You decide what data enters Marley, where it lives, and when it is deleted. All data is stored within your chosen region, and retention is fully under your control.",
+    icon: <LockIcon />,
+  },
+  {
+    title: "No Model Training",
+    description:
+      "Marley contractually guarantees your data stays yours. Your inputs, outputs, and documents are never used to train or improve any underlying model.",
     icon: <ShieldOffIcon />,
-  },
-  {
-    title: "Audit & Logging",
-    description:
-      "Every interaction timestamped, logged, and exportable. Full visibility for compliance teams, with no black boxes.",
-    icon: <ClockIcon />,
-  },
-  {
-    title: "GDPR Compliance",
-    description:
-      "Data minimisation by design, right to deletion, full data processing records. GDPR is not a checkbox; it is how we built the platform.",
-    icon: <CheckCircleIcon />,
-  },
-  {
-    title: "AES-256 Encryption",
-    description:
-      "Encrypted at rest using AES-256. All data in transit protected by TLS 1.3. Industry-standard, independently verified.",
-    icon: <KeyIcon />,
   },
 ];
 
@@ -76,8 +64,8 @@ export default function SecurityPage() {
 
       {/* Security grid */}
       <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-3 gap-5">
             {securityFeatures.map((feature, i) => (
               <FadeIn key={feature.title} delay={i * 50}>
                 <div className="bg-surface border border-border rounded-2xl p-6 hover:border-trust/30 transition-all duration-300 h-full">
@@ -118,39 +106,19 @@ export default function SecurityPage() {
   );
 }
 
-function KeyIcon() {
+function ShieldIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7A4E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     </svg>
   );
 }
 
-function UsersIcon() {
+function LockIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7A4E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-    </svg>
-  );
-}
-
-function ClockIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7A4E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" />
-      <polyline points="12 6 12 12 16 14" />
-    </svg>
-  );
-}
-
-function CheckCircleIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A7A4E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-      <polyline points="22 4 12 14.01 9 11.01" />
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
     </svg>
   );
 }
