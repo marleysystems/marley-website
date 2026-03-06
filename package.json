@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.15.8",
     "@types/nodemailer": "^7.0.11",
     "framer-motion": "^11.3.8",
     "lucide-react": "^0.400.0",
